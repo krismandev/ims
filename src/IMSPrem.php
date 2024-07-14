@@ -19,7 +19,7 @@ class IMSPrem {
     private string $password;
     private string $defaultSender;
     private $httpClient;
-    private string $urlV1 = "https://localhost:25000/sendsms";
+    private string $urlV1 = "https://api.imitra.com:25000/sendsms";
     private string $urlV2 = "https://api.imitra.com:25000/sendsms/v2";
 
     public function __construct(string $login_id,string $password, string $sender){
