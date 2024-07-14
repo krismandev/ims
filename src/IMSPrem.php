@@ -14,12 +14,12 @@ use GuzzleHttp\Client;
  * @version 1.0.0 
  */
 
-class IMSReg {
+class IMSPrem {
     private string $login_id;
     private string $password;
     private string $defaultSender;
     private $httpClient;
-    private string $urlV1 = "https://api.imitra.com:25000/sendsms";
+    private string $urlV1 = "https://localhost:25000/sendsms";
     private string $urlV2 = "https://api.imitra.com:25000/sendsms/v2";
 
     public function __construct(string $login_id,string $password, string $sender){
@@ -56,6 +56,14 @@ class IMSReg {
         return $content;
     }
 
+        /**
+     * this function used to send sms
+     * 
+     * @param string $msisdn The mobile destination number
+     * @param string $message Message content
+     * @param string $sender alternative Sender ID if you do not want to use default sender
+     * @return string send sms result in json format  
+     */
     public function sendSmsJson(string $msisdn, string $message,string $sender = null,string $referenceid = null) : string {
         $response = $this->httpClient->post($this->urlV2,[
             'json'=>[
