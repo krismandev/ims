@@ -1,0 +1,22 @@
+{
+    "name": "krisman/ims",
+    "description": "IMS PHP Package for SMS API",
+    "type": "library",
+    "version":"1.0.0",
+    "autoload": {
+        "psr-4": {
+            "Krisman\\IMS\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "keywords":["imitra","sms gateway","sms api", "sms"],
+    "require": {
+        "guzzlehttp/guzzle": "^7.8"
+    },
+    "authors": [
+        {
+            "name": "Krisman Pratama",
+            "email": "krisman@imitra.com"
+        }
+    ]
+}
